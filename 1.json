@@ -1,0 +1,3117 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "NationsAndCannonsCore",
+				"abbreviation": "NnC",
+				"full": "Nations & Cannons Core Rules",
+				"url": "https://www.patreon.com/posts/nations-cannons-32075895",
+				"authors": [
+					"Pat Mooney",
+					"Lin Taylor",
+					"Collyn Messier"
+				],
+				"convertedBy": [
+					"Moonstrous#5791"
+				],
+				"version": "1.0",
+				"targetSchema": "1.107.0",
+				"color": "#19425d"
+			}
+		],
+		"dateAdded": 1595706432,
+		"dateLastModified": 1595706432
+	},
+	"monster": [
+		{
+			"name": "Coehorn Mortar",
+			"source": "NationsAndCannonsCore",
+			"page": "60",
+			"size": "M",
+			"type": {
+				"type": "construct",
+				"tags": [
+					"mortar"
+				]
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"formula": "10d6",
+				"average": 38
+			},
+			"speed": {
+				"walk": 0
+			},
+			"str": 10,
+			"dex": 1,
+			"con": 13,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"passive": 0,
+			"resist": [
+				"bludgeoning",
+				{
+					"resist": [
+						"piercing",
+						{
+							"resist": [
+								"slashing"
+							]
+						}
+					]
+				}
+			],
+			"immune": [
+				{
+					"immune": [
+						"poison"
+					]
+				},
+				{
+					"immune": [
+						"psychic"
+					]
+				}
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Artillery Crew (2 Maximum)",
+					"entries": [
+						"The mortar is crewed by a group of two footmen that act on the same initiative (factored into its CR)."
+					]
+				},
+				{
+					"name": "Easy to Load",
+					"entries": [
+						"When the crew take the Swab & Reload action, the mortar is reloaded on a 4 or higher. The mortar is able to be reloaded the same round that it is fired."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Grenades (range 800/1,200 ft.).",
+					"entries": [
+						"The mortar can launch the following grenades, targeting a point within range.",
+						"At will: Portfire (misfire 3) — 10 ({@damage 3d6}) fire damage, {@dc 12} Dexterity",
+						"3/day: Smokepot (misfire 1) — smoke cloud, {@dc 13} Constitution"
+					]
+				}
+			],
+			"legendaryHeader": [
+				"The mortar's crew members can take one of the following actions instead of acting on their turn."
+			],
+			"legendaryActions": 3,
+			"legendary": [
+				{
+					"name": "Aim & Fire (misfire 4)",
+					"entries": [
+						"The crew makes an artillery attack ({@hit 3} to hit for a footman gunner), using the loaded grenade. Reduce the Misfire score by 2 for every two crew members who take the Aim & Fire action (Misfire 2 if all crew participate)."
+					]
+				},
+				{
+					"name": "Search & Clear",
+					"entries": [
+						"The crew attempts to repair a misfire with a {@dc 15} Dexterity (Tinker's Tools) check. For every 2 crew members that take the Search & Clear action, add 2 to the result of the check (+2 if all crew participate)."
+					]
+				},
+				{
+					"name": "Swab & Reload",
+					"entries": [
+						"Roll a {@dice d6}, adding 1 to the result for every two crew members who take the Swab & Reload action (+1 if all crew participate). On a 4 or higher, the mortar is reloaded."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Simple coehorn mortars can be carried from place to place by their crew, often setup behind walls and palisades to lay down fire on unsuspecting enemies."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/coehorn_mortar_token.png",
+			"damageTags": [
+				"F"
+			]
+		},
+		{
+			"name": "Bullock",
+			"source": "NationsAndCannonsCore",
+			"page": "61",
+			"size": "L",
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"formula": "3d10 + 6",
+				"average": 22
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 17,
+			"dex": 10,
+			"con": 14,
+			"int": 1,
+			"wis": 7,
+			"cha": 5,
+			"passive": 8,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Beast of Burden",
+					"entries": [
+						"The bullock is considered to be a Huge animal for the purpose of determining its carrying capacity."
+					]
+				},
+				{
+					"name": "Sure-Footed",
+					"entries": [
+						"The bullock has advantage on Strength and Dexterity saving throws made against effects that would knock it {@condition prone}."
+					]
+				},
+				{
+					"name": "Charge",
+					"entries": [
+						"If the bullock moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 3 ({@damage 1d6}) damage. If the target is a creature, it must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}8 ({@damage 2d4 + 3}) piercing damage."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"A bullock, or a steer, was most frequently seen in the fields of farming communities, used to drive plows and carts. In wartime, they also helped transport supplies. Henry Knox's artillery train was driven through the snow by bullocks, carrying cannon that would break the Siege of Boston."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/bullock_token.png",
+			"traitTags": [
+				"Charge"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Galloper Gun",
+			"source": "NationsAndCannonsCore",
+			"page": "60",
+			"size": "L",
+			"type": {
+				"type": "construct",
+				"tags": [
+					"cannon"
+				]
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "16d6",
+				"average": 56
+			},
+			"speed": {
+				"walk": 0
+			},
+			"str": 12,
+			"dex": 4,
+			"con": 14,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"passive": 0,
+			"resist": [
+				"bludgeoning",
+				{
+					"resist": [
+						"piercing",
+						{
+							"resist": [
+								"slashing"
+							]
+						}
+					]
+				}
+			],
+			"immune": [
+				{
+					"immune": [
+						"poison"
+					]
+				},
+				{
+					"immune": [
+						"psychic"
+					]
+				}
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Artillery Crew (6 Maximum)",
+					"entries": [
+						"The cannon is crewed by a group of six footmen that act on the same initiative (factored into its CR)."
+					]
+				},
+				{
+					"name": "Rapid Reposition",
+					"entries": [
+						"If at least 4 crew members take the Aim & Fire action, the cannon can move up 15 feet before firing."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Round Shot.",
+					"entries": [
+						"Range 800/3,200 ft., one target point. {@h}The cannon fires in a 3,200-foot line that is 5 feet wide. Each creature in that line must make a {@dc 11} Dexterity saving throw, taking 36 ({@damage 8d8}) artillery damage on a failed save, or half as much damage on a ",
+						" successful one. Targets beyond 800 feet have advantage on their saving throw."
+					]
+				},
+				{
+					"name": "Grape Shot.",
+					"entries": [
+						"Range 400 ft., one target point. {@h}The cannon fires in a 500-foot line that is 15 feet wide. Each creature in that line must make a {@dc 11} Dexterity saving throw, taking 18 ({@damage 4d8}) artillery damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"The cannon's crew members can take one of the following actions instead of acting on their turn."
+			],
+			"legendaryActions": 3,
+			"legendary": [
+				{
+					"name": "Aim & Fire (misfire 7)",
+					"entries": [
+						"The crew makes an artillery attack ({@hit 3} to hit for a footman gunner), using the loaded ammunition. Reduce the Misfire score by 2 for every two crew members who take the Aim & Fire action (Misfire 1 if all crew participate)."
+					]
+				},
+				{
+					"name": "Search & Clear",
+					"entries": [
+						"The crew attempts to repair a misfire with a {@dc 15} Dexterity (Tinker's Tools) check. For every 2 crew members that take the Search & Clear action, add 2 to the result of the check (+6 if all crew participate)."
+					]
+				},
+				{
+					"name": "Swab & Reload",
+					"entries": [
+						"Roll a {@dice d6}, adding 1 to the result for every two crew members who take the Swab & Reload action (+3 if all crew participate). On a 6 or higher, the cannon is reloaded. The cannon cannot be fired and reloaded in the same round."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Light field artillery, galloper guns are mounted on large carriages that can be pushed by crew or pulled by a limber and horse team outside of combat."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/galloper_gun_token.png",
+			"miscTags": [
+				"AOE"
+			]
+		},
+		{
+			"name": "Black Wolf",
+			"source": "NationsAndCannonsCore",
+			"page": "61",
+			"size": "M",
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d8 + 6",
+				"average": 33
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 15,
+			"dex": 15,
+			"con": 13,
+			"int": 4,
+			"wis": 12,
+			"cha": 8,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4",
+				"survival": "+3"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 13,
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) piercing damage. If the target is a creature, it must succeed on a {@dc 11} Strength saving throw or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Howl (Recharges After a Short or Long Rest).",
+					"entries": [
+						"The black wolf can howl to summon other wolves to aid it. Roll a {@dice d6}, on a 1, nothing happens; on a 2-3, summon two wolves; on a 4-5, summon three wolves; on a 6, summon a dire wolf. The summoned wolves appear within 30 ft. of the black wolf in an unoccupied space and act on the next turn."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"While most wolves tended to avoid human settlements, wolf attacks were still cause for concern. Frontier wolf attacks could be deadly for those unprepared, and some communities would even place bounties on wolves in the area. The active hunting of wolves was discouraged in many indigenous communities, such as the Cherokee nation, which had specific rights and customs around wolf hunting and killing. However, when wolf populations grew too large, some wolf hunting and raids on wolf dens were deemed necessary. "
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/black_wolf_token.png",
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Moose",
+			"source": "NationsAndCannonsCore",
+			"page": "62",
+			"size": "L",
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d10 + 30",
+				"average": 63
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 20
+			},
+			"str": 16,
+			"dex": 8,
+			"con": 21,
+			"int": 1,
+			"wis": 10,
+			"cha": 6,
+			"passive": 10,
+			"conditionImmune": [
+				"frightened"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"If the moose moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 ({@damage 2d6}) damage. If the target is a creature, it must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Rampage",
+					"entries": [
+						"When the moose reduces a creature to 0 hit points with a melee attack on its turn, the moose can take a bonus action to move up to half its speed and make a ram attack."
+					]
+				},
+				{
+					"name": "Top-Heavy",
+					"entries": [
+						"The moose has disadvantage on Strength and Dexterity saving throws made against effects that would knock it {@condition prone}. If the moose is knocked {@condition prone}, all adjacent creatures must succeed on a {@dc 13} Dexterity saving throw or take 18 ({@damage 2d12 + 5}) bludgeoning damage and be knocked {@condition prone} as the moose falls on top of them."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one {@condition prone} creature. {@h}16 ({@damage 3d8 + 3}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atk rw} {@hit 5} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d8 + 3}) bludgeoning damage."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Moose were not a common threat to humans. More often than not, they passed by human settlements without incident, and when they did see humans as a threat, they simply left. When moose chose to attack, however, the incident rarely ended well for the humans. Large, deadly, and nearly unstoppable, the best way to survive a moose attack was to avoid them entirely."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/moose_token.png",
+			"traitTags": [
+				"Charge",
+				"Rampage"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Mountain Lion",
+			"source": "NationsAndCannonsCore",
+			"page": "62",
+			"size": "M",
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "4d8 + 4",
+				"average": 22
+			},
+			"speed": {
+				"walk": 50,
+				"climb": 40
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 12,
+			"int": 3,
+			"wis": 14,
+			"cha": 7,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+7"
+			},
+			"passive": 14,
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Ambusher",
+					"entries": [
+						"The mountain lion has advantage on attack rolls against any creature it has surprised."
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The mountain lion has advantage on Wisdom (Perception) checks that rely on smell."
+					]
+				},
+				{
+					"name": "Pounce",
+					"entries": [
+						"If the mountain lion moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone}. If the target is {@condition prone}, the mountain lion can make one bite attack against it as a bonus action."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Mountain lions infrequently attacked armed humans, better suited to ambushing smaller prey. Smaller livestock and children were far more likely targets, though even adults traveling in the mountains alone at night needed to be wary."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/mountain_lion_token.png",
+			"traitTags": [
+				"Ambusher",
+				"Keen Senses",
+				"Pounce"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Rattlesnake",
+			"source": "NationsAndCannonsCore",
+			"page": "62",
+			"size": "S",
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d8 + 4",
+				"average": 22
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 3,
+			"dex": 17,
+			"con": 13,
+			"int": 2,
+			"wis": 10,
+			"cha": 3,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 12,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Ambusher",
+					"entries": [
+						"The rattlesnake has advantage on attack rolls against any creature it has surprised."
+					]
+				},
+				{
+					"name": "Rattle",
+					"entries": [
+						"Any creature hostile to the rattlesnake that starts its turn within 30 feet of the rattlesnake must make a {@dc 11} Wisdom saving throw, unless the rattlesnake is {@condition incapacitated}. On a failed save, the creature is {@condition frightened} until the start of its next turn. If a creature's saving throw is successful, the creature is immune to the rattlesnake's rattle for the next 24 hours. Beasts have disadvantage on this save."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 piercing damage, and the target must make a {@dc 12} Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Rattlesnakes were a symbol of revolutionary intent in the colonies. Popularized by Ben Franklin, it appeared in political cartoons and pamphlets representing the colonies striking against Britain. The snakes themselves were apolitical, attacking redcoats and patriots alike."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/rattlesnake_token.png",
+			"traitTags": [
+				"Ambusher"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"incapacitated"
+			]
+		},
+		{
+			"name": "Eagle Warrior",
+			"source": "NationsAndCannonsCore",
+			"page": "63",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any native heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"wicker breastplate, war shield"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d8 + 10",
+				"average": 32
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 17,
+			"dex": 13,
+			"con": 15,
+			"int": 11,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"dex": "+3",
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+4",
+				"acrobatics": "+3",
+				"investigation": "+2"
+			},
+			"passive": 14,
+			"resist": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"any three languages"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The eagle warrior is proficient with the poisoner's kit."
+					]
+				},
+				{
+					"name": "Devotion",
+					"entries": [
+						"The eagle warrior has advantage on saving throws against being {@condition charmed} or {@condition frightened}."
+					]
+				},
+				{
+					"name": "Keen Hearing and Sight",
+					"entries": [
+						"The eagle warrior has advantage on Wisdom (Perception) checks that rely on hearing or sight."
+					]
+				},
+				{
+					"name": "Poultice of Greater Healing (Recharge 5-6).",
+					"entries": [
+						"On each of its turns, the eagle warrior can use a bonus action to regain 14 ({@dice 4d4 + 4}) hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The eagle warrior makes three ranged attacks or two melee attacks."
+					]
+				},
+				{
+					"name": "Poisoned Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage, and the target must make a {@dc 13} Constitution saving throw or take 6 ({@damage 1d12}) poison damage on a failed save or half as much damage on a successful one. On a failed save the creature must repeat the saving throw at the start of each of its turns, taking 3 ({@damage 1d6}) poison damage on each subsequent failure. After a successful save the poison ends."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Trappings",
+					"entries": [
+						"When the eagle warrior is defeated, there is a 30% chance to recover one dose of bloodroot and a 60% chance to recover one poultice of greater healing."
+					],
+					"type": "variant"
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Common among First Nations and Native American communities is the ritual use and worship of animals, with different tribes and nations placing importance on different animals depending on their cultural traditions. The most constant is the eagle, which is considered sacred in most indigenous cultures in north and central America. ",
+					"Eagle feathers hold great significance according to these traditions. The nations of the Haudenosaunee confederacy use eagle feathers as a part of their ceremonial dress to denote which nation they belong to. Eagle feathers are also presented to people to mark great accomplishments or milestones in their lives, ranging from births to graduations to feats of bravery. ",
+					"Among tribes in the Cherokee nation at the time of the Revolutionary war, warriors were presented with eagle feathers to wear to mark significant victories or accomplishments. Warriors adorned with many feathers were therefore highly skilled; those with the most feathers were usually war chiefs or in similar leadership roles. "
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/eagle_warrior_token.png",
+			"traitTags": [
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			]
+		},
+		{
+			"name": "Musketier",
+			"source": "NationsAndCannonsCore",
+			"page": "64",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"hessian"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"wool uniform"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8 + 2",
+				"average": 11
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 13,
+			"int": 9,
+			"wis": 10,
+			"cha": 9,
+			"passive": 10,
+			"languages": [
+				"German"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Regimented",
+					"entries": [
+						"The musketier cannot score a critical hit. The musketier has advantage on attack rolls if an ally with the Regimented ability is within 5 feet and isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bayonet",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 1}) piercing damage. The musketier can affix or unaffix a bayonet as a bonus action."
+					]
+				},
+				{
+					"name": "Brown Bess",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 2): {@hit 3} to hit, range 60/240 ft., one target. {@h}10 ({@damage 2d8 + 1}) piercing damage."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The musketier reloads a firearm, or attempts to repair a misfired firearm with a {@dc 10} Dexterity check. The musketier must spend its full movement to take this action."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"When writing the Declaration of Independence, Thomas Jefferson protested King George’s use of foreign mercenaries to maintain a violent hold over the colonies. These Hessian auxiliaries were called Musketiers, led in the field by a sergeant (in low German, called a Schasant). While Hessian skirmishers gained a reputation for brutality, standard infantry divisions were deployed mostly as garrison troops to reinforce British positions and patrol occupied territories. ",
+					"Many of these Musketiers were conscripts or poor farmer’s sons, and they subsequently deserted in large numbers. The Americans even promised amnesty and land grants, encouraging Hessian defectors to switch sides. ",
+					"Most Hessians did not speak English, which the British considered untrustworthy. While they were longtime allies in name, there was significant friction between the British and Hessian soldiers over pay and lodgings, causing General Howe to issue an order to his soldiers to “treat the Germans as brothers.”"
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/musketier_token.png",
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Musketier Schasant",
+			"source": "NationsAndCannonsCore",
+			"page": "64",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"hessian"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"broadcloth uniform"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d8 + 5",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 12,
+			"int": 12,
+			"wis": 14,
+			"cha": 13,
+			"save": {
+				"con": "+3"
+			},
+			"skill": {
+				"athletics": "+4",
+				"perception": "+4"
+			},
+			"passive": 14,
+			"languages": [
+				"English",
+				"German"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Dauntless",
+					"entries": [
+						"The schasant has +2 AC if at least one of the schasant's allies is within 5 feet and isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bayonet",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage. The schasant can affix or unaffix a bayonet as a bonus action."
+					]
+				},
+				{
+					"name": "Brown Bess",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 2): {@hit 4} to hit, range 60/240 ft., one target. {@h}11 ({@damage 2d8 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Volley Fire",
+					"entries": [
+						"The schasant orders allies with the Regimented ability and a loaded musket to prepare a volley. Any such ally within 30 feet that has not acted this round (or an ally that has taken the Ready action) can immediately move up to half their speed to close ranks. Participating allies can take no further actions this round. ",
+						"If two or more of such allies form a continuous row they can fire a volley, a 100-foot line that is 5 feet wide per participating ally. Each creature in that line must make a {@dc 12} Dexterity saving throw, taking (14) {@damage 4d6} piercing damage on a failed save, or half as much damage on a successful one."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The schasant reloads a firearm, or attempts to repair a misfired firearm with a {@dc 10} Dexterity check. The schasant must spend its full movement to take this action."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"When writing the Declaration of Independence, Thomas Jefferson protested King George’s use of foreign mercenaries to maintain a violent hold over the colonies. These Hessian auxiliaries were called Musketiers, led in the field by a sergeant (in low German, called a Schasant). While Hessian skirmishers gained a reputation for brutality, standard infantry divisions were deployed mostly as garrison troops to reinforce British positions and patrol occupied territories. ",
+					"Many of these Musketiers were conscripts or poor farmer’s sons, and they subsequently deserted in large numbers. The Americans even promised amnesty and land grants, encouraging Hessian defectors to switch sides. ",
+					"Most Hessians did not speak English, which the British considered untrustworthy. While they were longtime allies in name, there was significant friction between the British and Hessian soldiers over pay and lodgings, causing General Howe to issue an order to his soldiers to “treat the Germans as brothers.”"
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/musketier_schasant_token.png",
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			]
+		},
+		{
+			"name": "Trailblazer",
+			"source": "NationsAndCannonsCore",
+			"page": "65",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"wool matchcoat"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d8",
+				"average": 27
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 13,
+			"dex": 15,
+			"con": 11,
+			"int": 12,
+			"wis": 17,
+			"cha": 9,
+			"save": {
+				"str": "+3",
+				"dex": "+4"
+			},
+			"skill": {
+				"investigation": "+3",
+				"perception": "+5",
+				"stealth": "+4",
+				"survival": "+5"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"English plus one other language"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Instinctive Gambits.",
+					"headerEntries": [
+						"The trailblazer is a 6th-level caster. Its casting ability is Wisdom (spell save {@dc 13}, +5 to hit with gambit attacks). The trailblazer has the following instinctive gambits prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell foxfire|nationsandcannonsstarter}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell escalade|nationsandcannonsstarter}",
+								"{@spell fog of war|nationsandcannonsstarter}",
+								"{@spell hunter's mark}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell improvised artillery|nationsandcannonsstarter}",
+								"{@spell portage|nationsandcannonsstarter}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The trailblazer is proficient with carpenter's tools."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit ({@hit 5} to hit with shillelagh), reach 5 ft., one target. {@h}3 ({@damage 1d4 + 1}) bludgeoning damage or 7 ({@damage 1d8 + 3}) bludgeoning damage with shillelagh."
+					]
+				},
+				{
+					"name": "Pennsylvania Rifle",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 3): {@hit 4} to hit, range 120/480 ft., one target. {@h}15 ({@damage 3d8 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The trailblazer reloads a firearm, or attempts to repair a misfired firearm with a {@dc 11} Dexterity check. The trailblazer must spend its full movement to take this action."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Trappings",
+					"entries": [
+						"When the trailblazer is defeated, there is a 30% chance to recover a Pennsylvania Rifle."
+					],
+					"type": "variant"
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Trailblazers were travelers who navigated the wilderness and forged new paths for settlers and migrants to follow. Operating in small groups, these brave scouts led their compatriots through uncharted territory."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/trailblazer_token.png",
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Tribal Archer",
+			"source": "NationsAndCannonsCore",
+			"page": "65",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any native heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"wool matchcoat"
+					]
+				}
+			],
+			"hp": {
+				"formula": "3d8",
+				"average": 13
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 10,
+			"int": 9,
+			"wis": 13,
+			"cha": 11,
+			"skill": {
+				"investigation": "+1",
+				"perception": "+3",
+				"stealth": "+5"
+			},
+			"passive": 13,
+			"languages": [
+				"any one language (usually heritage language)"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Natural Defense",
+					"entries": [
+						"The tribal archer has advantage on Dexterity (Stealth) checks made to hide in natural terrain, and treats half cover provided by natural terrain as three-quarters cover."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The tribal archer makes two attacks with its longbow or long knife."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 5} to hit, range 150/600 ft., one target., one target. {@h}8 ({@damage 1d10 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Long Knife",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@dice 1d6})+3 slashing damage, or 7 ({@dice 1d8})+3 slashing damage if used with two hands."
+					]
+				}
+			],
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/tribal_archer_token.png",
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			]
+		},
+		{
+			"name": "Wolf Warrior",
+			"source": "NationsAndCannonsCore",
+			"page": "66",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any native heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"wicker breastplate"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d8 + 4",
+				"average": 22
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 13,
+			"int": 11,
+			"wis": 12,
+			"cha": 11,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4",
+				"athletics": "+5"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"any one language (usually heritage language)"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Brave.",
+					"entries": [
+						"The wolf warrior has advantage on saving throws against being {@condition frightened}."
+					]
+				},
+				{
+					"name": "Martial Advantage",
+					"entries": [
+						"Once per turn, the wolf warrior can deal an extra 7 ({@damage 2d6}) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the wolf warrior that isn't {@condition incapacitated}"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The wolf warrior makes two attacks with its handaxes."
+					]
+				},
+				{
+					"name": "Handaxe",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Among tribes in the Cherokee nation at the time of the Revolutionary war, warriors were presented with  eagle feathers to wear to mark significant victories or accomplishments. Warriors adorned with many feathers were therefore highly skilled; those with the most feathers were usually war chiefs or in similar leadership roles. ",
+					"Other animals are used in similar ritual practices, with different parts of the animals used in different ceremonies or traditions. Depending on the nation, these animals might range from wolves to turkeys. Many warriors were identified ceremonially with certain animals depending on their role or accomplishments in war. These designations were frequently misunderstood and misrepresented by the European colonists."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/wolf_warrior_token.png",
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			]
+		},
+		{
+			"name": "Tribal Guide",
+			"source": "NationsAndCannonsCore",
+			"page": "65",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any native heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"wool matchcoat"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8 + 2",
+				"average": 11
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 14,
+			"cha": 11,
+			"skill": {
+				"perception": "+4",
+				"nature": "+2",
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"any three languages"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Keen Hearing and Sight",
+					"entries": [
+						"The tribal guide has advantage on Wisdom (Perception) checks that rely on hearing or sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The tribal guide makes two melee attacks with its war spear."
+					]
+				},
+				{
+					"name": "Bolas",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 15/45 ft., one Large or smaller creature. {@h}5 ({@damage 1d6 + 2}) bludgeoning damage and the target is knocked {@condition prone} and is unable to stand until freed. A creature can use its action to make a {@dc 10} Strength check to free itself or another creature entangled in a bolas, ending the effect on a success. Dealing 5 slashing damage to the bolas (AC 10) frees the target without harming it and destroys the bolas."
+					]
+				},
+				{
+					"name": "War Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or range 30/90 ft., one target. {@h}6 ({@damage 1d10 + 1}) piercing damage."
+					]
+				}
+			],
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/tribal_guide_token.png",
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Chaplain",
+			"source": "NationsAndCannonsCore",
+			"page": "66",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"wicker breastplate"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d6",
+				"average": 21
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 11,
+			"int": 14,
+			"wis": 15,
+			"cha": 14,
+			"skill": {
+				"medicine": "+4",
+				"history": "+4",
+				"religion": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"English plus any two languages"
+			],
+			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Capricious Gambits",
+					"headerEntries": [
+						"The chaplain is a 6th-level caster. Its casting ability is Charisma (spell save {@dc 12}, +4 to hit with gambit attacks). The chaplain has the following capricious gambits prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell resistance}",
+								"{@spell spare the dying}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell bless}",
+								"{@spell purify food and drink}",
+								"{@spell sanctuary}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell aid}",
+								"{@spell prayer of healing}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Devotion",
+					"entries": [
+						"The chaplain has advantage on saving throws against being {@condition charmed} or {@condition frightened}."
+					]
+				},
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The chaplain is proficient with carpenter's tools."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Walking Stick",
+					"entries": [
+						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage, or 4 ({@damage 1d8}) bludgeoning damage if used with two hands."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Chaplains held important positions in their communities during the Revolutionary era. Citizens would go to their local pastors for religious and spiritual guidance, seeking comfort in the uncertainty of wartime. From their position of influence, some pastors would sermonize on the virtues of declaring for one side or another. Some even operated in secret, coordinating with rebels or loyalist spies to spread their message both publicly and privately. ",
+					"While village pastors worked on the home front in their villages, army chaplains offered the same guidance to Continental soldiers. These chaplains began as volunteer ministers, but eventually received official recognition. Army chaplains lived in officers’ quarters and could be paid as much as colonels. In order to serve the variety of soldiers comprising the Continental Army, chaplains acted as educators and political advisors as well as spiritual leaders. Many accompanied their brigades into battle."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/chaplain_token.png",
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Highlander",
+			"source": "NationsAndCannonsCore",
+			"page": "67",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"british"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"broadcloth coat"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d6 + 15",
+				"average": 32
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 17,
+			"dex": 13,
+			"con": 16,
+			"int": 10,
+			"wis": 10,
+			"cha": 9,
+			"save": {
+				"str": "+5"
+			},
+			"skill": {
+				"athletics": "+5"
+			},
+			"passive": 10,
+			"languages": [
+				"English",
+				"Gaelic"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Highland Charge",
+					"entries": [
+						"The highlander can make a melee attack as a bonus action after taking the Dash action. When the highlander reduces a creature to 0 hit points with a melee attack on its turn, the highlander can take a bonus action to move up to half its speed and make a melee attack."
+					]
+				},
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The highlander is proficient with carpenter's tools."
+					]
+				},
+				{
+					"name": "Reckless",
+					"entries": [
+						"At the start of its turn, the highlander can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Greatsword",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) slashing damage."
+					]
+				},
+				{
+					"name": "Highland Pistol",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 2): {@hit 3} to hit, 30/120 ft., one target. {@h}8 ({@damage 2d6 + 1}) piercing damage, or 10 ({@damage 2d8 + 1}) piercing damage if used with two hands."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The highlander reloads a firearm, or attempts to repair a misfired firearm with a {@dc 10} Dexterity check. The highlander must spend its full movement to take this action."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Highlanders were fearsome Scottish warriors, most of whom came to be allied with the British. After the failed Jacobite Rising in 1745, Parliament forbade the Scots from wearing tartan, speaking Gaelic, and other important cultural practices. In response, many Scottish families immigrated to Virginia and the Carolinas. ",
+					"The British eventually relaxed these policies due to manpower shortages during the Seven Years’ War, allowing Highlanders recruits to go to war in kilt, bonnet, and full regalia. Whether out of a desire to practice their traditions openly, or simply for pay, many highland Scots enlisted. After serving in integrated units, some Scots began to feel a strong connection to the British identity. ",
+					"By the time of the American Revolution many Highlanders felt a true loyalty to the crown, though some served the British forces under duress—after years of failed uprisings, many were in danger of lost titles or revoked land grants if they did not reestablish their name with the crown. For these reasons, Highlanders fought almost exclusively for the British cause."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/highlander_token.png",
+			"traitTags": [
+				"Reckless"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Provocateur",
+			"source": "NationsAndCannonsCore",
+			"page": "67",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"colonial"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "6d6",
+				"average": 21
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 13,
+			"wis": 12,
+			"cha": 15,
+			"skill": {
+				"deception": "+4",
+				"insight": "+3",
+				"intimidation": "+4"
+			},
+			"passive": 11,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"English"
+			],
+			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Capricious Gambits",
+					"headerEntries": [
+						"The provocateur is a 6th-level caster. Its casting ability is Charisma (spell save {@dc 12}, +4 to hit with gambit attacks). The provocateur has the following capricious gambits prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell friends}",
+								"{@spell vicious mockery}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell dissonant whispers}",
+								"{@spell hex}",
+								"{@spell non sequitur|nationsandcannonsstarter}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell castigate|nationsandcannonsstarter}",
+								"{@spell enthrall}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The provocateur is proficient with calligrapher's supplies."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Rapier",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Vicious Mockery (cantrip)",
+					"entries": [
+						"The provocateur unleash a string of insults at one creature it can see within 60 feet of it. If the target can hear and understand the provocateur, the target must succeed on a {@dc 12} Wisdom saving throw or take 5 ({@damage 2d4}) psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Clever Retort (2/Day).",
+					"entries": [
+						"When the provocateur is targeted by an attack or ability check, it can roll {@dice 1d6} and subtract the result from either the Attack roll, an ability check, or a damage roll made against the provocateur by a creature within 60 feet."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Minutemen were self-trained militia groups in the colonies, organized even before the outbreak of war. Massachusetts required all able-bodied men to participate in the local militia. Some, chosen for their strength and commitment, were designated to be ready for emergencies at a minute's notice, thus originating the term. These minutemen were young, eager, and ready for action. ",
+					"As tensions rose in Massachusetts before the onset of the war, the Provincial Congress worked behind the scenes against the British occupation, under the leadership of John Hancock. At the battles of Lexington and Concord, when the British tried to capture the Provincial Congress’s leaders, Massachusetts Minutemen were the first to arrive to stand against their forces."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/provocateur_token.png",
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Minuteman",
+			"source": "NationsAndCannonsCore",
+			"page": "68",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"wool coat"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d6 + 4",
+				"average": 18
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 15,
+			"con": 12,
+			"int": 9,
+			"wis": 10,
+			"cha": 11,
+			"skill": {
+				"athletics": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"English plus any one language"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"On each of its turns, the minuteman can use a bonus action to take the Dash, Disengage, or Hide action."
+					]
+				},
+				{
+					"name": "Rapid Reload (1/Day).",
+					"entries": [
+						"The minuteman can take the Clear / Reload action as a bonus action."
+					]
+				},
+				{
+					"name": "Regimented.",
+					"entries": [
+						"The minuteman cannot score a critical hit. The minuteman has advantage on attack rolls if an ally with the Regimented ability is within 5 feet and isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Brown Bess",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 2): {@hit 4} to hit, range 60/240 ft., one target. {@h}11 ({@damage 2d8 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The minuteman reloads a firearm, or attempts to repair a misfired firearm with a {@dc 10} Dexterity check. The minuteman must spend its full movement to take this action."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Minutemen were self-trained militia groups in the colonies, organized even before the outbreak of war. Massachusetts required all able-bodied men to participate in the local militia. Some, chosen for their strength and commitment, were designated to be ready for emergencies at a minute's notice, thus originating the term. These minutemen were young, eager, and ready for action.",
+					"As tensions rose in Massachusetts before the onset of the war, the Provincial Congress worked behind the scenes against the British occupation, under the leadership of John Hancock. At the battles of Lexington and Concord, when the British tried to capture the Provincial Congress’s leaders, Massachusetts Minutemen were the first to arrive to stand against their forces."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/minuteman_token.png",
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Tinker",
+			"source": "NationsAndCannonsCore",
+			"page": "68",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"broadcloth coat"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d6",
+				"average": 17
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 15,
+			"wis": 12,
+			"cha": 13,
+			"skill": {
+				"history": "+4",
+				"insight": "+3",
+				"investigation": "+4"
+			},
+			"passive": 11,
+			"languages": [
+				"English plus any one language"
+			],
+			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Savvy Gambits",
+					"headerEntries": [
+						"The tinker is a 5th-level caster. Its casting ability is Intelligence (spell save {@dc 12}, +4 to hit with gambit attacks). The tinker has the following savvy gambits prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell mending}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell entrap|nationsandcannonsstarter}",
+								"{@spell grease}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell sally forth|nationsandcannonsstarter}",
+								"{@spell shatter}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The tinker is proficient with smith's tools and tinker's tools."
+					]
+				},
+				{
+					"name": "Regimented.",
+					"entries": [
+						"The tinker cannot score a critical hit. The tinker has advantage on attack rolls if an ally with the Regimented ability is within 5 feet and isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Acid Splash (cantrip)",
+					"entries": [
+						"The tinker hurls a vial of acid up to 60 feet at one target, or at two targets that are within 5 feet of each other. A target must succeed on a {@dc 12} Dexterity saving throw or take 7 ({@damage 2d6}) acid damage"
+					]
+				},
+				{
+					"name": "Brown Bess",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 2): {@hit 3} to hit, range 60/240 ft., one target. {@h}10 ({@damage 2d8 + 1}) piercing damage."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The tinker reloads a firearm, or attempts to repair a misfired firearm with a {@dc 10} Dexterity (Tinker's Tools) check. The tinker must spend its full movement to take this action."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Trappings.",
+					"entries": [
+						"When the tinker is defeated, there is a 60% chance to recover a set of tinker's tools."
+					],
+					"type": "variant"
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Tinkers, sometimes called tinsmiths, were in high demand by army quartermasters. Hammering out jams, mending broken clasps, and patching ruptured gun barrels, tinkers and the like kept armies running. Many civilian tinkers were either paid or pressed into service to cast musket shot and maintain equipment on both sides of the war. ",
+					"Conscripted tinkers were called Artificers, a military designation for craftsmen overseeing the repair and maintenance of cannons. Artificers were considered indispensable, given how rare their skills were and how decisive artillery could be in a pitched battle."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/tinker_token.png",
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			]
+		},
+		{
+			"name": "Trapper",
+			"source": "NationsAndCannonsCore",
+			"page": "69",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"broadcloth coat"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d6 + 8",
+				"average": 22
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 14,
+			"int": 14,
+			"wis": 15,
+			"cha": 10,
+			"skill": {
+				"survival": "+6",
+				"animal handling": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"English plus any two languages"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The trapper is proficient with leatherworker's tools and water vehicles."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"The trapper deals an extra 7 ({@damage 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the trapper that isn't incapacitated and the trapper doesn't have disadvantage on the attack roll."
+					]
+				},
+				{
+					"name": "Ritual Gambits",
+					"entries": [
+						"The trapper can cast alarm, entrap or portage as a ritual. The trapper's casting ability for these gambits is Wisdom (save {@dc 12})."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Highland Pistol",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 2): {@hit 5} to hit, 30/120 ft., one target. {@h}10 ({@damage 2d6 + 3}) piercing damage, or 12 ({@damage 2d8 + 3}) piercing damage if used with two hands."
+					]
+				},
+				{
+					"name": "Hunting Trap (x2)",
+					"entries": [
+						"The trapper sets a hunting trap. When a creature steps onto the trap it must succeed on a {@dc 13} Dexterity saving throw or take {@damage 1d4} piercing damage and stop moving. Until the creature breaks free of the trap, it cannot move more than 3 feet from the trap. A creature can use its action to make a {@dc 13} Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature."
+					]
+				},
+				{
+					"name": "Long Knife",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The trapper reloads a firearm, or attempts to repair a misfired firearm with a {@dc 10} Dexterity check. The trapper must spend its full movement to take this action."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Trappings.",
+					"entries": [
+						"When the trapper is defeated, there is a 60% chance to recover £ 10 worth of animal pelts."
+					],
+					"type": "variant"
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Trappers were hardy, self-sufficient people who spent their lives on long expeditions into the wilderness in search of valuable pelts. Building snares and pitfall traps, trappers would camouflage themselves and lie in wait for their prey. The most renowned colonial trappers were called Voyageurs, adventurous river travelers from Quebec.",
+					"Some trappers became the stuff of tall tales, daring figures who often operated outside the law as colonial governments regulated the sale of furs in favor of rich trading companies. At times, competing hunting parties even came to blows. A dangerous profession, the far woods are littered with unmarked graves of failed trappers."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/trapper_token.png",
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Woodsman",
+			"source": "NationsAndCannonsCore",
+			"page": "69",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"colonial"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "3d6 + 6",
+				"average": 16
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 7,
+			"skill": {
+				"survival": "+2",
+				"nature": "+2"
+			},
+			"passive": 10,
+			"languages": [
+				"English"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The woodsman is proficient with carpenter's tools."
+					]
+				},
+				{
+					"name": "Aggressive",
+					"entries": [
+						"As a bonus action, the woodsman can move up to its speed toward a hostile creature that it can see."
+					]
+				},
+				{
+					"name": "Favored Enemy (Beasts)",
+					"entries": [
+						"The woodsman has advantage on Wisdom and Intelligence checks that relate to beasts."
+					]
+				},
+				{
+					"name": "Point-Blank Fighter",
+					"entries": [
+						"Being within 5 feet of a hostile creature doesn’t impose disadvantage on the woodsman's ranged attack rolls"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Blunderbuss",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 3): {@hit 4} to hit, range 35/— ft., one target. {@h}12 ({@damage 4d4 + 2}) piercing damage. Reduce the damage by 1 die for every 10 feet the woodsman is from the target."
+					]
+				},
+				{
+					"name": "Handaxe",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage"
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The woodsman reloads a firearm, or attempts to repair a misfired firearm with a {@dc 11} Dexterity check. The woodsman must spend its full movement to take this action."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Woodsmen who chose to live on the frontier had their work cut out for them. Far from major American settlements, these colonists had to work the land for their keep, and fend off retaliatory attacks from the indigenous populations whose lands they sometimes occupied. Woodsmen had to make their living clearing lumber, as well as hunting and subsistence farming. However difficult the life, many felt it was worth it for the freedom it offered"
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/woodsman_token.png",
+			"traitTags": [
+				"Aggressive"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Dragoon",
+			"source": "NationsAndCannonsCore",
+			"page": "70",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"buff coat"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d10 + 7",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 14,
+			"con": 13,
+			"int": 11,
+			"wis": 15,
+			"cha": 11,
+			"save": {
+				"dex": "+4",
+				"con": "+3"
+			},
+			"skill": {
+				"acrobatics": "+4",
+				"animal handling": "+4",
+				"athletics": "+6"
+			},
+			"passive": 12,
+			"languages": [
+				"English plus any one language"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Instinctive Gambits",
+					"headerEntries": [
+						"The dragoon is a 7th-level caster. Its casting ability is Wisdom (spell save {@dc 12}, +4 to hit with gambit attacks). The dragoon has the following Instinctive gambits prepared:"
+					],
+					"footerEntries": [
+						"*The dragoon casts this gambit on its carbine before combat."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mending}",
+								"{@spell resistance}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell barbed spike|nationsandcannonsstarter}",
+								"{@spell dead drop|nationsandcannonsstarter}",
+								"{@spell jump}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell find steed}",
+								"{@spell stock and barrel|nationsandcannonsstarter}*"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The dragoon is proficient with leatherworker's tools and land vehicles."
+					]
+				},
+				{
+					"name": "Mounted",
+					"entries": [
+						"The dragoon rides a warhorse (factored into its CR)."
+					]
+				},
+				{
+					"name": "Born in the Saddle",
+					"entries": [
+						"The dragoon can mount or dismount a horse by spending 5 feet of movement. While the dragoon is mounted, its mount can make attacks independently."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The dragoon makes two attacks with its cavalry saber"
+					]
+				},
+				{
+					"name": "Cavalry Carbine",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 1): {@hit 4} to hit ({@hit 5} to hit with stock and barrel), range 50/200 ft., one target. {@h}13 ({@damage 2d10 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Cavalry Saber",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d10 + 3}) slashing damage."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The dragoon reloads a firearm, or attempts to repair a misfired firearm with a {@dc 9} Dexterity check. The dragoon must spend its full movement to take this action"
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Dragoons, or mounted light infantry, were elite soldiers used to conduct deadly raids into enemy territory. Formidable opponents, cavalry had a significant advantage over foot soldiers. A handful of dragoons could rout a small enemy band or encampment, using the element of surprise to overwhelm their foes. On the battlefield, a cavalry charge alone could break a vulnerable flank.",
+					"Though highly mobile, dragoons were not true heavy cavalry in the British military tradition. They were best deployed as a screening force, hitting the enemy hard and relying on their speed and agility to avoid return fire. ",
+					"While a great asset when available, dragoons were not common due to their cost. Cavalry companies were expensive to support; transporting horses to the front was difficult, let alone across the ocean from Great Britain, where many died in cargo holds. Horses needed to be fed and stabled, which was especially difficult during wartime conditions when a dozen men could be supplied for the same price.",
+					"Still, dragoons turned the tide on more than one occasion. At the Battle of Cowpens, Lt. Colonel William Washington’s light dragoons helped envelop the overextended British and delivered a devastating victory to the Continental Army."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/dragoon_token.png",
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Drummer",
+			"source": "NationsAndCannonsCore",
+			"page": "71",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"wool uniform"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d10 - 2",
+				"average": 9
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 12,
+			"con": 9,
+			"int": 10,
+			"wis": 9,
+			"cha": 13,
+			"save": {
+				"wis": "+1"
+			},
+			"skill": {
+				"performance": "+3"
+			},
+			"passive": 9,
+			"languages": [
+				"any one language (usually heritage language)"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Proficiencies",
+					"entries": [
+						"The dragoon is proficient with the drum and fife."
+					]
+				},
+				{
+					"name": "Brave",
+					"entries": [
+						"The drummer has advantage on saving throws against being {@condition frightened}."
+					]
+				},
+				{
+					"name": "Ritual Gambits",
+					"entries": [
+						"The drummer can cast alarm or drum signal* as a ritual. The drummer's casting ability for these gambits is Charisma (save {@dc 11})."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger.",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
+					]
+				},
+				{
+					"name": "Fife and Drum (Recharges after a Short or Long Rest).",
+					"entries": [
+						"By playing a rousing song the drummer suppresses a fear effect on all friendly creatures that can hear it within 30 feet until the start of the drummer's next turn. The drummer can maintain this effect indefinitely on subsequent rounds until it takes another action. If the drummer takes damage, it must make a {@dc 10} Constitution saving throw or lose concentration, immediately ending the effect on a failed save."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Drummers were used in both armies to keep their soldiers marching in time and in an orderly fashion. Their music was also used to communicate signals to the rest of the army. Often young boys or old men past the age of fighting, drummers were intended to be noncombatants and did not carry firearms. However, some boys joined the army as drummers with the intent to enlist once they were of age, gaining experience not just as drummers but as messengers and errand-boys."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/drummer_token.png",
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			]
+		},
+		{
+			"name": "Field Officer",
+			"source": "NationsAndCannonsCore",
+			"page": "71",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"buff coat, gorget"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d10 + 7",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 18,
+			"con": 12,
+			"int": 15,
+			"wis": 13,
+			"cha": 16,
+			"save": {
+				"con": "+3",
+				"wis": "+3",
+				"cha": "+5"
+			},
+			"skill": {
+				"insight": "+3",
+				"intimidation": "+5",
+				"persuasion": "+5",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"English plus any two languages"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Mounted",
+					"entries": [
+						"The officer rides a riding horse (factored into its CR). The horse is battle-trained and does not run from combat."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dueling Pistol (x2).",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 1): {@hit 6} to hit, range 35/140 ft., one target. {@h}13 ({@damage 2d8 + 4}) piercing damage."
+					]
+				},
+				{
+					"name": "Leadership (Recharges after a Short or Long Rest)",
+					"entries": [
+						" For 1 minute, the officer can utter a special command or warning whenever a nonhostile creature that it can see within 30 ft. of it makes an attack roll or a saving throw. The creature can add a {@dice d4} to its roll provided it can hear and understand the officer. A creature can benefit from only one Leadership die at a time. This effect ends if the officer is {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Steady Now.",
+					"entries": [
+						"Until the start of the officer's next turn, when Volley Fire is ordered by an allied creature within 60 feet, the officer can increases the damage of the volley by 7 ({@dice 2d6}) and the saving throw DC by 2"
+					]
+				},
+				{
+					"name": "Volley Fire",
+					"entries": [
+						"The officer orders allies with the Regimented ability and a loaded musket to prepare a volley. Any such ally within 30 feet that has not acted this round (or an ally that has taken the Ready action) can immediately move up to half their speed to close ranks. Participating allies can take no further actions this round. ",
+						"If two or more of such allies form a continuous row they can fire a volley, a 100-foot line that is 5 feet wide per participating ally. Each creature in that line must make a {@dc 12} Dexterity saving throw, taking 14 ({@damage 4d6}) piercing damage on a failed save, or half as much damage on a successful one."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The officer reloads both its pistols, or attempts to repair its misfired pistols with a {@dc 9} Dexterity check. The officer must spend its full movement to take this action."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Trappings",
+					"entries": [
+						"When the captain is defeated, there is a 50% chance to recover a gorget and a 60% chance to recover a dueling pistol."
+					],
+					"type": "variant"
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Field officers directed line troops on the battlefield, reporting directly to Generals or other commanding officers. Good officers distinguished themselves by tactical prowess, from careful advances and troop movements to seize opportunities in the chaos of battle. ",
+					"Men who wished to become officers in the British army had to purchase a commission or receive one from a sponsor, thus maintaining the officer corps as the domain of gentlemen exclusively. This system led to accusations of nepotism and other forms of corruption within the ranks. ",
+					"On the patriot side, however, field commissions were given far more freely — distinguished war veterans, militia captains, and even enlisted men of good reputation were offered commissions as the needs of the new Continental Army grew. Many field officers in the Continental Army were originally British soldiers, who joined the cause of the revolution against their former employers."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/field_officer_token.png",
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE"
+			]
+		},
+		{
+			"name": "Footman",
+			"source": "NationsAndCannonsCore",
+			"page": "72",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"wool uniform"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d10",
+				"average": 11
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 11,
+			"int": 12,
+			"wis": 11,
+			"cha": 9,
+			"passive": 10,
+			"languages": [
+				"any one language (usually heritage language)"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Regimented",
+					"entries": [
+						"The footman cannot score a critical hit. The footman has advantage on attack rolls if an ally with the Regimented ability is within 5 feet and isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bayonet",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 1}) piercing damage. The footman can affix or unaffix a bayonet as a bonus action."
+					]
+				},
+				{
+					"name": "Brown Bess",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 2): {@hit 4} to hit, range 60/240 ft., one target. {@h}11 ({@damage 2d8 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The footman reloads a firearm, or attempts to repair a misfired firearm with a {@dc 10} Dexterity check. The footman must spend its full movement to take this action."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Footmen were the soldiers of a Continental Line or British Regiment of Foot. Also known as regulars, footmen were the standard infantry that made up line infantry regiments. After the French and Indian War, British regulars were stationed in North America as a standing army for the first time. ",
+					"British soldiers offered the local militias some drills and training, but as tensions rose, it became clear that the British found this less important than keeping the colonists in line. The Quartering Act, which required Colonial citizens to allow British soldiers to sleep in their homes, was heavily protested by the colonists, and eventually became the foundation of the third amendment."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/continental_footman_token.png",
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Foot Sergeant",
+			"source": "NationsAndCannonsCore",
+			"page": "72",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"broadcloth uniform"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d10 + 6",
+				"average": 39
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 13,
+			"int": 13,
+			"wis": 11,
+			"cha": 15,
+			"save": {
+				"con": "+3",
+				"wis": "+2"
+			},
+			"skill": {
+				"athletics": "+3",
+				"perception": "+2",
+				"performance": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"any two languages"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Crack Shot",
+					"entries": [
+						"A ranged weapon deals one extra die of its damage when the sergeant hits with it (included in the attack)."
+					]
+				},
+				{
+					"name": "Dauntless",
+					"entries": [
+						"The sergeant has +2 AC if at least one of the sergeant's allies is within 5 feet and isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bayonet",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 1}) piercing damage. The sergeant can affix or unaffix a bayonet as a bonus action."
+					]
+				},
+				{
+					"name": "Brown Bess",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 2): {@hit 5} to hit, range 60/240 ft., one target. {@h}16 ({@damage 3d8 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Volley Fire",
+					"entries": [
+						"The sergeant orders allies with the Regimented ability and a loaded musket to prepare a volley. Any such ally within 30 feet that has not acted this round (or an ally that has taken the Ready action) can immediately move up to half their speed to close ranks. Participating allies can take no further actions this round. ",
+						"If two or more of such allies form a continuous row they can fire a volley, a 100-foot line that is 5 feet wide per participating ally. Each creature in that line must make a {@dc 12} Dexterity saving throw, taking 14 ({@damage 4d6}) piercing damage on a failed save, or half as much damage on a successful one."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The sergeant reloads a firearm, or attempts to repair a misfired firearm with a {@dc 10} Dexterity check. The sergeant must spend its full movement to take this action."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Sergeants were noncommissioned officers designated to lead troops in battle. Ranked between the foot soldiers and their commanding officers, sergeants lived in the enlisted barracks and trained troops under the orders of field officers. Foot sergeants gave orders on the battlefield, arranging their troops",
+					"in formation to attack. Muskets were notoriously unreliable; they were inaccurate and good only for short ranges. Thus sergeants arranged their troops in formation to perform volley fire — footmen were arranged in three rows to fire alternately; the first row would fire and then kneel while reloading to allow the soldiers behind them to fire. This required precise timing and coordination on behalf of the soldiers, and a good sergeant was imperative to executing the maneuver correctly."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/continental_foot_sergeant_token.png",
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			]
+		},
+		{
+			"name": "Fusilier",
+			"source": "NationsAndCannonsCore",
+			"page": "73",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"british"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"broadcloth uniform"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d10 + 5",
+				"average": 32
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 13,
+			"int": 16,
+			"wis": 12,
+			"cha": 10,
+			"save": {
+				"con": "+3"
+			},
+			"skill": {
+				"investigation": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"English plus any one language"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Savvy Gambits",
+					"headerEntries": [
+						"The fusilier is a 5th-level caster. Its casting ability is Intelligence (spell save {@dc 13}, +5 to hit with gambit attacks). The fusilier has the following savvy gambits prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell blade ward}",
+								"{@spell mending}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell barbed spike|nationsandcannonsstarter}",
+								"{@spell grease}",
+								"{@spell shield}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell blowback|nationsandcannonsstarter}",
+								"{@spell ricochet|nationsandcannonsstarter}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Crack Shot",
+					"entries": [
+						"A ranged weapon deals one extra die of its damage when the fusilier hits with it (included in the attack)."
+					]
+				},
+				{
+					"name": "Proficiency",
+					"entries": [
+						"The fusilier is proficient with gunsmith's tools and tinker's tools."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						" If the fusilier is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the fusilier instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+					]
+				},
+				{
+					"name": "Rapid Reload (2/Day)",
+					"entries": [
+						"The fusilier can take the Clear / Reload action as a bonus action."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Fusil Carbine",
+					"entries": [
+						" Ranged Weapon Attack (reload 1, misfire 2): {@hit 5} to hit, range 40/160 ft., one target. {@h}16 ({@damage 3d8 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}16 ({@damage 1d6 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The fusilier reloads a firearm, or attempts to repair a misfired firearm with a {@dc 9} Dexterity (Tinker's Tools) check. The fusilier must spend its full movement to take this action."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Fusilier is a storied rank, dating back to the early days of musket warfare. Equipped with early flintlock weapons, at a time when most soldiers used matchlock guns with lit, sparking fuses, they protected artillery and vulnerable caches of black powder. By the time of the Revolution, the flintlock was the norm, but the fusilier’s reputation as an elite infantry unit remained. The Royal Fusiliers participated in many of the most significant battles of the war, operating on the front lines of the major offensives that captured both Philadelphia and Charleston."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/fusilier_token.png",
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Grenadier",
+			"source": "NationsAndCannonsCore",
+			"page": "73",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any heritage"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"broadcloth uniform"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d10 + 14",
+				"average": 52
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 15,
+			"int": 12,
+			"wis": 11,
+			"cha": 11,
+			"save": {
+				"str": "+6",
+				"dex": "+5"
+			},
+			"skill": {
+				"athletics": "+6"
+			},
+			"passive": 10,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"any two languages"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Reckless",
+					"entries": [
+						"At the start of its turn, the grenadier can gain advantage on all melee or ranged weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn."
+					]
+				},
+				{
+					"name": "Proficiency",
+					"entries": [
+						"The grenadier is proficient with the munitions kit."
+					]
+				},
+				{
+					"name": "Refined Saltpeter",
+					"entries": [
+						"The grenadier increases the damage die of grenades it throws by one step and the saving throw DC by 1 (included in grenades)."
+					]
+				},
+				{
+					"name": "Grenades (range 30/70 ft)",
+					"entries": [
+						"The grenadier is issued the following grenades and can throw them as an attack.",
+						"3/day: Portfire (misfire 3) — 13 ({@damage 3d8}) fire damage, {@dc 13} Dexterity",
+						"1/day: Smokepot (misfire 1) — smoke cloud, {@dc 14} Constitution"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The grenadier makes two attacks: one with its liège musket and one with a grenade or two attacks with its bayonet."
+					]
+				},
+				{
+					"name": "Bayonet",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) piercing damage. The grenadier can affix or unaffix a bayonet as a bonus action."
+					]
+				},
+				{
+					"name": "Liège Musket",
+					"entries": [
+						"Ranged Weapon Attack (reload 1, misfire 2): {@hit 5} to hit, range 60/240 ft., one target. {@h}14 ({@damage 2d10 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Clear / Reload",
+					"entries": [
+						"The grenadier reloads a firearm, or attempts to repair a misfired firearm with a {@dc 10} Dexterity check. The grenadier must spend half its movement to take this action."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Trappings",
+					"entries": [
+						"When the grenadier is defeated, there is a 60% chance to recover either two portfire grenades or one smokepot grenade."
+					],
+					"type": "variant"
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Grenadiers had a reputation for strength and fearlessness. Selected from among the biggest and strongest recruits to serve as assault troops, they were sent into battle with dangerous explosives. Some were still armed with handheld fuse-lit grenades, carrying bronze match cases with a piece of burning hempen rope as their tools. They were unable to wear hats with wide brims as these prevented them from throwing grenades overhand, and so adopted distinctive, towering bearskin hats. Grenadiers had a reputation for charging heedlessly into battle. They stormed entrenched patriot defenses at Bunker Hill, overcoming the heavy fire that had routed other companies before."
+				]
+			},
+			"tokenUrl": "https://nationsandcannons.com/wp-content/uploads/grenadier_token.png",
+			"traitTags": [
+				"Reckless"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			]
+		}
+	]
+}
